@@ -1,0 +1,27 @@
+{
+  "template": "./templates/BeetD2_base.js",
+  "class": "sorceress",
+  "stat_priority": {
+    "default": "vitality",
+    "targets": [
+      {"stat": "strength", "level": 5, "target": 30},
+      {"stat": "energy", "level": 10, "target": 50},
+      {"stat": "strength", "level": 30, "target": 80},
+      {"stat": "strength", "level": 70, "target": 156}
+    ]
+  },
+  "skill_priority": [
+    {"skill": "fire mastery", "target": 1},
+    {"skill": "fire bolt", "target": 1},
+    {"skill": "warmth", "target": 1},
+    {"skill": "frozen armor", "target": 1},
+    {"skill": "static field", "target": 1},
+    {"skill": "fire bolt", "target": 5},
+    {"skill": "teleport", "target": 1},
+    {"skill": "fire ball", "target": 20},
+    {"skill": "meteor", "target": 20},
+    {"skill": "fire bolt", "target": 20, "min_level": 50},
+    {"skill": "fire mastery", "target": 20},
+    {"skill": "warmth", "target": 20, "min_level": 70}
+  ]
+}

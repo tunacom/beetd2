@@ -1,0 +1,26 @@
+{
+  "template": "./templates/BeetD2_base.js",
+  "class": "sorceress",
+  "stat_priority": {
+    "default": "vitality",
+    "targets": [
+      {"stat": "strength", "level": 5, "target": 30},
+      {"stat": "energy", "level": 10, "target": 50},
+      {"stat": "strength", "level": 30, "target": 80},
+      {"stat": "strength", "level": 70, "target": 156}
+    ]
+  },
+  "skill_priority": [
+    {"skill": "lightning mastery", "target": 1},
+    {"skill": "charged bolt", "target": 1},
+    {"skill": "warmth", "target": 1},
+    {"skill": "frozen armor", "target": 1},
+    {"skill": "static field", "target": 1},
+    {"skill": "charged bolt", "target": 5},
+    {"skill": "teleport", "target": 1},
+    {"skill": "chain lightning", "target": 20},
+    {"skill": "lightning", "target": 20},
+    {"skill": "lightning mastery", "target": 20},
+    {"skill": "charged bolt", "target": 20, "min_level": 50}
+  ]
+}

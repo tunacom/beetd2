@@ -1,0 +1,28 @@
+{
+  "template": "./templates/BeetD2_base.js",
+  "class": "barbarian",
+  "stat_priority": {
+    "default": "vitality",
+    "targets": [
+      {"stat": "strength", "level": 5, "target": 30},
+      {"stat": "energy", "level": 10, "target": 40},
+      {"stat": "dexterity", "level": 20, "target": 40},
+      {"stat": "strength", "level": 30, "target": 100},
+      {"stat": "dexterity", "level": 70, "target": 75}
+    ]
+  },
+  "skill_priority": [
+    {"skill": "war cry", "target": 1},
+    {"skill": "leap attack", "target": 1},
+    {"skill": "natural resistance", "target": 1},
+    {"skill": "increased speed", "target": 1},
+    {"skill": "find item", "target": 1},
+    {"skill": "battle command", "target": 1},
+    {"skill": "battle orders", "target": 20},
+    {"skill": "shout", "target": 20},
+    {"skill": "taunt", "target": 20},
+    {"skill": "find item", "target": 20, "min_level": 60},
+    {"skill": "battle command", "target": 20, "min_level": 60},
+    {"skill": "war cry", "target": 20, "min_level": 60}
+  ]
+}

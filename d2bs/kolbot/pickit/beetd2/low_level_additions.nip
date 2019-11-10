@@ -1,0 +1,10 @@
+// Keep stuff.
+//[quality] == set
+//[quality] == unique
+
+[Type] == Gold # [Gold] >= 100
+[quality] >= magic # [strength] >= 100
+
+[type] == healingpotion
+[type] == manapotion
+[type] == rejuvpotion

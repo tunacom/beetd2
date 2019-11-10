@@ -1,0 +1,7 @@
+[MASTER]
+disable=
+  too-many-locals,
+  too-many-branches,
+
+[FORMAT]
+indent-string='    '

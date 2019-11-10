@@ -1,0 +1,23 @@
+{
+  "template": "./templates/BeetD2_paladin.js",
+  "class": "paladin",
+  "stat_priority": {
+    "default": "vitality",
+    "targets": [
+      {"stat": "strength", "level": 5, "target": 30},
+      {"stat": "energy", "level": 10, "target": 50},
+      {"stat": "strength", "level": 30, "target": 80},
+      {"stat": "strength", "level": 70, "target": 156}
+    ]
+  },
+  "skill_priority": [
+    {"skill": "holy shield", "target": 1},
+    {"skill": "blessed hammer", "target": 5},
+    {"skill": "fanaticism", "target": 10},
+    {"skill": "blessed hammer", "target": 20},
+    {"skill": "fanaticism", "target": 20},
+    {"skill": "vigor", "target": 20},
+    {"skill": "blessed aim", "target": 20},
+    {"skill": "holy shield", "target": 20}
+  ]
+}

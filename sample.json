@@ -1,0 +1,56 @@
+{
+  "leader": "mysorc",
+  "script": "scripts/manual.js",
+  "kolbot_path": "../d2bot-with-kolbot",
+  "templates_path": "./templates",
+  "characters": [
+    {
+      "profile_name": "tuna1",
+      "character_name": "mysorc",
+      "class": "Sorceress",
+      "build": "BeetD2Teleport"
+    },
+    {
+      "profile_name": "tuna2",
+      "character_name": "boguy",
+      "class": "Barbarian",
+      "build": "BeetD2Shout"
+    },
+    {
+      "profile_name": "tuna3",
+      "character_name": "skeleman",
+      "class": "Necromancer",
+      "build": "BeetD2Summoner"
+    },
+    {
+      "profile_name": "tuna4",
+      "character_name": "salvadin",
+      "class": "Paladin",
+      "build": "BeetD2HammerSalv"
+    },
+    {
+      "profile_name": "tuna5",
+      "character_name": "hammerguy",
+      "class": "Paladin",
+      "build": "BeetD2HammerConc"
+    },
+    {
+      "profile_name": "tuna6",
+      "character_name": "convicdin",
+      "class": "Paladin",
+      "build": "BeetD2HammerConv"
+    },
+    {
+      "profile_name": "tuna7",
+      "character_name": "oaksageisgood",
+      "class": "Druid",
+      "build": "BeetD2Fissure"
+    },
+    {
+      "profile_name": "tuna8",
+      "character_name": "usefuluntilnm",
+      "class": "Assassin",
+      "build": "BeetD2FireTrap"
+    }
+  ]
+}

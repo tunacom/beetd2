@@ -1,0 +1,24 @@
+{
+  "template": "./templates/BeetD2_base.js",
+  "class": "druid",
+  "stat_priority": {
+    "default": "vitality",
+    "targets": [
+      {"stat": "strength", "level": 5, "target": 30},
+      {"stat": "energy", "level": 10, "target": 50},
+      {"stat": "strength", "level": 30, "target": 80},
+      {"stat": "strength", "level": 70, "target": 156}
+    ]
+  },
+  "skill_priority": [
+    {"skill": "summon grizzly", "target": 1},
+    {"skill": "solar creeper", "target": 1},
+    {"skill": "molten boulder", "target": 2},
+    {"skill": "fissure", "target": 20},
+    {"skill": "oak sage", "target": 20},
+    {"skill": "firestorm", "target": 20},
+    {"skill": "molten boulder", "target": 20},
+    {"skill": "fissure", "target": 20},
+    {"skill": "cyclone armor", "target": 20}
+  ]
+}

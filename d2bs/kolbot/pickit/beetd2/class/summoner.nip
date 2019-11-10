@@ -1,0 +1,105 @@
+// Rings.
+[type] == ring && [quality] >= magic # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 1
+[type] == ring && [quality] >= magic # [maxhp] >= 10 # [tier] == 1
+[type] == ring && [quality] >= magic # [maxmana] >= 20 # [tier] == 2
+[type] == ring && [quality] >= magic # [maxmana] >= 40 # [tier] == 3
+[type] == ring && [quality] >= magic # [maxmana] >= 60 # [tier] == 4
+[type] == ring && [quality] >= magic # [maxmana] >= 80 # [tier] == 5
+[type] == ring && [quality] >= magic # [maxmana] >= 40 && [maxhp] >= 10 # [tier] == 5
+[type] == ring && [quality] >= magic # [maxmana] >= 40 && [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 5
+[type] == ring && [quality] >= magic # [maxhp] >= 20 && [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 5
+[type] == ring && [quality] >= magic # [maxmana] >= 60 && [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 100
+[type] == ring && [quality] >= magic # [itemallskills] == 1 # [tier] == 110
+
+// Amulets.
+[type] == amulet && [quality] >= magic # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 1
+[type] == amulet && [quality] >= magic # [maxhp] >= 10 # [tier] == 1
+[type] == amulet && [quality] >= magic # [maxmana] >= 20 # [tier] == 2
+[type] == amulet && [quality] >= magic # [maxmana] >= 40 # [tier] == 3
+[type] == amulet && [quality] >= magic # [maxmana] >= 60 # [tier] == 4
+[type] == amulet && [quality] >= magic # [maxmana] >= 80 # [tier] == 5
+[type] == amulet && [quality] >= magic # [maxmana] >= 40 && [maxhp] >= 10 # [tier] == 5
+[type] == amulet && [quality] >= magic # [maxmana] >= 40 && [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 5
+[type] == amulet && [quality] >= magic # [maxhp] >= 20 && [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 5
+[type] == amulet && [quality] >= magic # [necromancerskills] >= 1 # [tier] == 6
+[type] == amulet && [quality] >= magic # [maxmana] >= 60 && [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 100
+[type] == amulet && [quality] >= magic # [itemallskills] == 1 # [tier] == 100
+[type] == amulet && [quality] >= magic # [necromancerskills] >= 2 # [tier] == 101
+[type] == amulet && [quality] >= magic # [necromancersummoningskilltab] >= 3 # [tier] == 102
+[type] == amulet && [quality] >= magic # [itemallskills] == 2 # [tier] == 110
+
+// Belts.
+[type] == belt && [name] == belt && [quality] >= normal && [flag] != ethereal # # [tier] == 2
+[type] == belt && [name] == platedbelt && [quality] >= normal && [flag] != ethereal # # [tier] == 2
+[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 10 # [tier] == 10
+[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 10 # [tier] == 10
+[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 20 # [tier] == 11
+[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 40 # [tier] == 12
+[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 60 # [tier] == 13
+[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 80 # [tier] == 14
+
+// Boots.
+[type] == boots && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 1
+[type] == boots && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 2
+[type] == boots && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40 # [tier] == 3
+[type] == boots && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 60 # [tier] == 4
+[type] == boots && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 80 # [tier] == 5
+[type] == boots && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 100 # [tier] == 100
+[name] == sharkskinboots && [quality] == unique && [flag] != ethereal # # [tier] == 101
+
+// Gloves.
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [maxmana] >= 1 # [tier] == 1
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [maxmana] >= 5 # [tier] == 2
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [maxmana] >= 10 # [tier] == 3
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [maxmana] >= 30 # [tier] == 4
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 5
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 6
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 # [tier] == 7
+[type] == gloves && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40 # [tier] == 8
+[name] == gauntlets && [quality] == unique && [flag] != ethereal # # [tier] == 100
+[name] == lightgauntlets && [quality] == unique && [flag] != ethereal # # [tier] == 101
+
+// Armors.
+[type] == armor && [quality] >= magic && [flag] != ethereal # [maxhp] >= 10 # [tier] == 1
+[type] == armor && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 2
+[type] == armor && [quality] >= magic && [flag] != ethereal # [maxhp] >= 20 # [tier] == 3
+[type] == armor && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 4
+[type] == armor && [quality] >= magic && [flag] != ethereal # [maxhp] >= 40 # [tier] == 5
+[type] == armor && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 # [tier] == 6
+[type] == armor && [quality] >= magic && [flag] != ethereal # [maxhp] >= 60 # [tier] == 7
+[type] == armor && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40 # [tier] == 8
+[type] == armor && [quality] >= magic && [flag] != ethereal # [maxhp] >= 80 # [tier] == 9
+[type] == armor && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 && [maxhp] >= 50 # [tier] == 10
+[type] == armor && [quality] >= magic && [flag] != ethereal # [itemallskills] >= 1 # [tier] == 100
+
+// Helms.
+[type] == helm && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 2
+[type] == helm && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 3
+[type] == helm && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 # [tier] == 4
+[type] == helm && [quality] >= magic && [flag] != ethereal # [itemallskills] >= 1 # [tier] == 100
+[type] == helm && [quality] >= magic && [flag] != ethereal # [itemallskills] >= 2 # [tier] == 101
+
+// Shields.
+[type] == shield && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 50
+[type] == shield && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 51
+[type] == shield && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 # [tier] == 52
+[type] == shield && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40 # [tier] == 53
+[type] == shield && [flag] != ethereal # [itemallskills] >= 1 # [tier] == 150
+[name] == roundshield && [quality] == unique && [flag] != ethereal # # [tier] == 150
+[type] == shield && [flag] != ethereal # [itemallskills] >= 2 # [tier] == 151
+
+// Weapons.
+[type] == weapon && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 1
+[type] == weapon && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 2
+[type] == weapon && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 # [tier] == 3
+[type] == weapon && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40 # [tier] == 4
+
+[type] == wand && [quality] >= normal && [flag] != ethereal # [necromancerskills]+[necromancersummoningskilltab]+[skillraiseskeleton] >= 1 # [tier] == 100
+[type] == wand && [quality] >= normal && [flag] != ethereal # [necromancerskills]+[necromancersummoningskilltab]+[skillraiseskeleton] >= 2 # [tier] == 101
+[type] == wand && [quality] >= normal && [flag] != ethereal # [necromancerskills]+[necromancersummoningskilltab]+[skillraiseskeleton] >= 3 # [tier] == 102
+[type] == wand && [quality] >= magic && [flag] != ethereal # [necromancerskills]+[necromancersummoningskilltab] >= 2 # [tier] == 103
+[type] == wand && [quality] >= magic && [flag] != ethereal # [necromancerskills]+[necromancersummoningskilltab] >= 3 # [tier] == 104
+[type] == wand && [quality] >= magic && [flag] != ethereal # [necromancerskills]+[necromancersummoningskilltab]+[skillraiseskeleton] >= 4 # [tier] == 105
+
+// Additional gold.
+[quality] >= magic # [strength] >= 100

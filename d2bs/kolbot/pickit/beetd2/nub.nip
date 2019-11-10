@@ -1,0 +1,17 @@
+[name] == gold
+[type] == healingpotion
+[type] == manapotion
+[type] == rejuvpotion
+
+// All the things!
+[quality] >= normal && [name] != arrows && [name] != bolts
+[type] == gem
+
+// Oh right, and we want to equip some things too. Tiers >= 100 cause we want to hold it all even if we can't equip.
+[quality] > normal # # [tier] == 100
+
+// Nearly useless.
+[quality] >= magic # [itemmagicbonus] >= 10 # [tier] == 101
+[quality] >= magic # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 101
+[quality] >= magic # [maxmana] >= 10 # [tier] == 101
+[quality] >= magic # [maxhp] >= 5 # [tier] == 101

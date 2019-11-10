@@ -1,0 +1,23 @@
+{
+  "template": "./templates/BeetD2_base.js",
+  "class": "assassin",
+  "stat_priority": {
+    "default": "vitality",
+    "targets": [
+      {"stat": "strength", "level": 5, "target": 30},
+      {"stat": "energy", "level": 10, "target": 50},
+      {"stat": "strength", "level": 30, "target": 80},
+      {"stat": "strength", "level": 70, "target": 156}
+    ]
+  },
+  "skill_priority": [
+    {"skill": "burst of speed", "target": 5},
+    {"skill": "wake of fire", "target": 20},
+    {"skill": "shadow master", "target": 1},
+    {"skill": "fire blast", "target": 20},
+    {"skill": "death sentry", "target": 1},
+    {"skill": "wake of inferno", "target": 20},
+    {"skill": "death sentry", "target": 20},
+    {"skill": "lightning sentry", "target": 20}
+  ]
+}
