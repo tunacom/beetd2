@@ -521,7 +521,8 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.mephisto = function () {
-		if (me.getQuest(22, 0)) {
+		// Gate on access to act 4 rather than the mephisto quest.
+		if (me.getQuest(23, 0)) {
 			return;
 		}
 
@@ -531,9 +532,16 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		say("1");
 
 		Attack.kill(242);
+		Attack.clear(40);
+		Pather.moveTo(17566, 8069);
 		say("a4");
+
+		// Have the sorc take the portal last. Prevents us from losing stragglers.
+		while (!this.playersInArea(103)) {
+			delay(1000);
+		}
+
 		BeetD2Common.changeAct(4);
-		delay(60000); // Wait for stragglers.
 	};
 
 	this.diablo = function () {
