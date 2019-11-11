@@ -29,9 +29,8 @@
 [type] == amulet && [quality] >= magic # [itemallskills] == 2 # [tier] == 110
 
 // Belts.
-[type] == belt && [name] == belt && [quality] >= normal && [flag] != ethereal # # [tier] == 2
+[type] == belt && [name] == belt && [quality] >= normal && [flag] != ethereal # # [tier] == 1
 [type] == belt && [name] == platedbelt && [quality] >= normal && [flag] != ethereal # # [tier] == 2
-[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 10 # [tier] == 10
 [type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 10 # [tier] == 10
 [type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 20 # [tier] == 11
 [type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 40 # [tier] == 12

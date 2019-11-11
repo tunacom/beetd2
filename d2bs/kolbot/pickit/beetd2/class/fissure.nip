@@ -29,9 +29,8 @@
 [type] == amulet && [quality] >= magic # [itemallskills] == 2 # [tier] == 110
 
 // Belts.
-[type] == belt && [name] == belt && [quality] >= normal && [flag] != ethereal # # [tier] == 2
+[type] == belt && [name] == belt && [quality] >= normal && [flag] != ethereal # # [tier] == 1
 [type] == belt && [name] == platedbelt && [quality] >= normal && [flag] != ethereal # # [tier] == 2
-[type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 10 # [tier] == 10
 [type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 10 # [tier] == 10
 [type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 20 # [tier] == 11
 [type] == belt && [quality] >= magic && [flag] != ethereal # [maxhp] >= 40 # [tier] == 12
@@ -77,12 +76,12 @@
 [type] == helm && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 20 # [tier] == 3
 [type] == helm && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 # [tier] == 4
 
-[type] == pelt && [quality] >= normal && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab]+[skillfissure] >= 1 # [tier] == 50
-[type] == pelt && [quality] >= normal && [flag] != ethereal # [itemallskills]+[itemallskills]+[druidskills]+[elementalskilltab]+[skillfissure] >= 2 # [tier] == 51
-[type] == pelt && [quality] >= normal && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab]+[skillfissure] >= 3 # [tier] == 52
+[type] == pelt && [quality] >= normal && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab]+[skillcarrionvine] >= 1 # [tier] == 50
+[type] == pelt && [quality] >= normal && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab]+[skillcarrionvine] >= 2 # [tier] == 51
+[type] == pelt && [quality] >= normal && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab]+[skillcarrionvine] >= 3 # [tier] == 52
 [type] == pelt && [quality] >= magic && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab] >= 2 # [tier] == 53
 [type] == pelt && [quality] >= magic && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab] >= 3 # [tier] == 100
-[type] == pelt && [quality] >= magic && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab]+[skillfissure] >= 4 # [tier] == 101
+[type] == pelt && [quality] >= magic && [flag] != ethereal # [itemallskills]+[druidskills]+[elementalskilltab]+[skillcarrionvine] >= 4 # [tier] == 101
 
 // Shields.
 [type] == shield && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 10 # [tier] == 50
