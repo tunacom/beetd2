@@ -68,7 +68,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.den = function () {
-		if (me.getQuest(1, 0) || me.charlvl >= 48) {
+		if (me.getQuest(1, 0) || me.charlvl >= 50) {
 			return;
 		}
 
@@ -77,7 +77,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.bloodraven = function () {
-		if (me.getQuest(2, 0) || me.charlvl >= 48) {
+		if (me.getQuest(2, 0) || me.charlvl >= 50) {
 			return;
 		}
 
@@ -94,7 +94,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		// Fight or tele to cats 4.
-		if (me.charlvl < 48) {
+		if (me.charlvl < 50) {
 			BeetD2Common.disableTeleIfNeeded();
 			while (!BeetD2Common.fightTo(37)) {
 				// Keep retrying if we fail to fight there.
@@ -110,13 +110,17 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 
 		Town.goToTown();
 		say("2");
-		delay(10000);
+		delay(5000);
 
+		// Have the leader go last. Prevents us from losing stragglers.
 		say("a2");
-		BeetD2Common.changeAct(2);
-		delay(60000);
+		while (!this.playersInArea(40)) {
+			delay(1000);
+		}
 
-		if (me.charlvl >= 48) {
+		BeetD2Common.changeAct(2);
+
+		if (me.charlvl >= 50) {
 			Pather.teleport = true;
 		}
 	};
@@ -127,7 +131,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		var fight = true;
-		if (me.charlvl < 48) {
+		if (me.charlvl < 50) {
 			BeetD2Common.disableTeleIfNeeded();
 			while (!BeetD2Common.fightTo(60)) {
 				// Retry if we fail to fight there.
@@ -290,7 +294,8 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.duriel = function () {
-		if (me.getQuest(14, 0)) {
+		// Gate on access to act 3 rather than the Duriel quest.
+		if (me.getQuest(15, 0)) {
 			return;
 		}
 
@@ -344,7 +349,6 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Pather.teleport = false;
 		Attack.kill(211);
 
-		// More stuff stolen from autosmurf.
 		Pather.moveTo(22579, 15706);
 		Pather.moveTo(22577, 15649, 10);
 		Pather.moveTo(22577, 15609, 10);
@@ -352,19 +356,20 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		var unit = getUnit(1, "tyrael");
 		Pather.moveToUnit(unit);
 		unit.interact();
-		//sendPacket(1, 0x31, 4, unit.gid, 4, 302);
+
 		delay(1000);
 		me.cancel();
 		Town.goToTown();
 
 		say("2");
 		say("a3");
+
+		// Have the leader go last. Prevents us from losing stragglers.
+		while (!this.playersInArea(75)) {
+			delay(1000);
+		}
+
 		BeetD2Common.changeAct(3);
-
-		// TODO(tuna): This might always be worth keeping, but consider shortening
-		// duration after implementing automatic act change in the merc script.
-		delay(120000); // Wait for stragglers.
-
 		Pather.teleport = true;
 	};
 
@@ -417,7 +422,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		delay(20000);
 
 		Pather.useWaypoint(83);
-		Pather.moveTo(me.x + 97, me.y - 68);
+		Pather.moveTo(me.x + 97, me.y - 56); // Originally me.y - 68.
 		BeetD2Common.makePortal();
 		say("1");
 
@@ -536,7 +541,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Pather.moveTo(17566, 8069);
 		say("a4");
 
-		// Have the sorc take the portal last. Prevents us from losing stragglers.
+		// Have the leader take the portal last. Prevents us from losing stragglers.
 		while (!this.playersInArea(103)) {
 			delay(1000);
 		}
@@ -545,7 +550,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.diablo = function () {
-		if (me.getQuest(26, 0)) {
+		if (me.getQuest(28, 0)) {
 			return;
 		}
 
@@ -558,6 +563,11 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 
 		delay(1000);
 		say("a5");
+
+		while (!this.playersInArea(109)) {
+			delay(1000);
+		}
+
 		BeetD2Common.changeAct(5);
 	};
 
@@ -600,7 +610,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Config.Baal.BaalMessage = "Baal!";
 		Config.Baal.SoulQuit = false;
 		Config.Baal.DollQuit = false;
-		Config.Baal.KillBaal = me.charlvl === 48 || me.charlvl === 78;
+		Config.Baal.KillBaal = me.charlvl === 50 || me.charlvl === 78;
 		BeetD2Baal();
 	};
 
