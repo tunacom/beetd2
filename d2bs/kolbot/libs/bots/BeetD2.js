@@ -18,6 +18,9 @@ if (!isIncluded("common/BeetD2Common.js")) {
 
 function BeetD2 () { // eslint-disable-line no-unused-vars
 	// Attempt to beat diablo 2. Then beat it again. And again. It's probably worse than Autosmurf.
+	const nightmareLevel = 52;
+	const hellLevel = 82;
+
 	var areaList = [];
 	if (me.charlvl < 7) {
 		areaList = [4];
@@ -68,7 +71,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.den = function () {
-		if (me.getQuest(1, 0) || me.charlvl >= 50) {
+		if (me.getQuest(1, 0) || me.charlvl >= nightmareLevel) {
 			return;
 		}
 
@@ -77,7 +80,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.bloodraven = function () {
-		if (me.getQuest(2, 0) || me.charlvl >= 50) {
+		if (me.getQuest(2, 0) || me.charlvl >= nightmareLevel) {
 			return;
 		}
 
@@ -94,7 +97,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		// Fight or tele to cats 4.
-		if (me.charlvl < 50) {
+		if (me.charlvl < nightmareLevel) {
 			BeetD2Common.disableTeleIfNeeded();
 			while (!BeetD2Common.fightTo(37)) {
 				// Keep retrying if we fail to fight there.
@@ -120,7 +123,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 
 		BeetD2Common.changeAct(2);
 
-		if (me.charlvl >= 50) {
+		if (me.charlvl >= nightmareLevel) {
 			Pather.teleport = true;
 		}
 	};
@@ -131,7 +134,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		var fight = true;
-		if (me.charlvl < 50) {
+		if (me.charlvl < nightmareLevel) {
 			BeetD2Common.disableTeleIfNeeded();
 			while (!BeetD2Common.fightTo(60)) {
 				// Retry if we fail to fight there.
@@ -610,7 +613,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Config.Baal.BaalMessage = "Baal!";
 		Config.Baal.SoulQuit = false;
 		Config.Baal.DollQuit = false;
-		Config.Baal.KillBaal = me.charlvl === 50 || me.charlvl === 78;
+		Config.Baal.KillBaal = me.charlvl === nightmareLevel || me.charlvl === hellLevel;
 		BeetD2Baal();
 	};
 
