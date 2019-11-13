@@ -99,3 +99,4 @@
 
 // Additional gold.
 [quality] >= magic # [strength] >= 100
+[Type] == Gold # [Gold] >= 100
