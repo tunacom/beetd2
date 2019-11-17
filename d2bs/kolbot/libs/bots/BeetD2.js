@@ -18,8 +18,8 @@ if (!isIncluded("common/BeetD2Common.js")) {
 
 function BeetD2 () { // eslint-disable-line no-unused-vars
 	// Attempt to beat diablo 2. Then beat it again. And again. It's probably worse than Autosmurf.
-	const nightmareLevel = 52;
-	const hellLevel = 82;
+	const nightmareLevel = 57;
+	const hellLevel = 85;
 
 	var areaList = [];
 	if (me.charlvl < 7) {
@@ -429,6 +429,8 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		BeetD2Common.makePortal();
 		say("1");
 
+		Pather.teleport = false;
+
 		Attack.clear(10);
 
 		var bosses = [2863, 2860, 2862];
@@ -439,6 +441,8 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 				// Expected if the bosses are killed out of order.
 			}
 		}
+
+		Pather.teleport = true;
 
 		BeetD2Common.getQuestItem(173);
 		BeetD2Common.makePortal();

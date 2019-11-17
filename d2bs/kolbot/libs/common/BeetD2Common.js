@@ -143,7 +143,7 @@ var BeetD2Common = { // eslint-disable-line no-unused-vars,no-redeclare
 			Town.doChores();
 			Town.move("portalspot");
 			Pather.usePortal(i, me.name);
-			while (me.inTown()) {
+			while (me.inTown) {
 				delay(50);
 			}
 		}
