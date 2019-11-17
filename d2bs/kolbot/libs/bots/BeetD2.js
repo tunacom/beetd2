@@ -377,7 +377,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.khalim_eye = function () {
-		if (me.getQuest(18, 0) || me.getItem(553)) {
+		if (me.getQuest(18, 0) || me.getItem(553) || me.getItem(174)) {
 			return;
 		}
 
@@ -390,7 +390,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.khalim_brain = function () {
-		if (me.getQuest(18, 0) || me.getItem(555)) {
+		if (me.getQuest(18, 0) || me.getItem(555) || me.getItem(174)) {
 			return;
 		}
 
@@ -403,7 +403,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.khalim_heart = function () {
-		if (me.getQuest(18, 0) || me.getItem(554)) {
+		if (me.getQuest(18, 0) || me.getItem(554) || me.getItem(174)) {
 			return;
 		}
 
@@ -458,16 +458,18 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			Town.openStash();
 		}
 
-		Storage.Cube.MoveTo(me.getItem(553));
-		Storage.Cube.MoveTo(me.getItem(554));
-		Storage.Cube.MoveTo(me.getItem(555));
-		Storage.Cube.MoveTo(me.getItem(173));
-		Cubing.openCube();
-		transmute();
+		if (!me.getItem(174)) {
+			Storage.Cube.MoveTo(me.getItem(553));
+			Storage.Cube.MoveTo(me.getItem(554));
+			Storage.Cube.MoveTo(me.getItem(555));
+			Storage.Cube.MoveTo(me.getItem(173));
+			Cubing.openCube();
+			transmute();
 
-		delay(1000);
-		Cubing.emptyCube();
-		me.cancel();
+			delay(1000);
+			Cubing.emptyCube();
+			me.cancel();
+		}
 
 		var item = me.getItem(-1, 0);
 		do {
