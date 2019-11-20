@@ -69,6 +69,8 @@
 [type] == armor && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40 # [tier] == 8
 [type] == armor && [quality] >= magic && [flag] != ethereal # [maxhp] >= 80 # [tier] == 9
 [type] == armor && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 30 && [maxhp] >= 50 # [tier] == 10
+[type] == armor # [frw] == 25 && [fcr] == 25 && [fhr] == 25 # [tier] == 50  // Stealth.
+[type] == armor # [fireresist]+[lightresist]+[coldresist]+[poisonresist] == 200 # [tier] == 51  // Smoke.
 [type] == armor && [quality] >= magic && [flag] != ethereal # [itemallskills] >= 1 # [tier] == 100
 
 // Helms.
@@ -87,6 +89,7 @@
 ([type] == shield || [type] == auricshields) && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40 # [tier] == 53
 ([type] == shield || [type] == auricshields) && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 80 # [tier] == 54
 ([type] == shield || [type] == auricshields) && [quality] >= magic && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 120 # [tier] == 55
+[type] == shield && [flag] != ethereal # [fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 100 # [tier] == 60  // Rhyme.
 ([type] == shield || [type] == auricshields) && [quality] >= magic && [flag] != ethereal # [paladinskills] >= 1 # [tier] == 150
 ([type] == shield || [type] == auricshields) && [quality] >= magic && [flag] != ethereal # [paladinskills] >= 2 # [tier] == 151
 [name] == gildedshield && [quality] == unique && [flag] != ethereal # # [tier] == 152

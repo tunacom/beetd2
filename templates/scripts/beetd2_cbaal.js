@@ -17,8 +17,8 @@ if (Config.Leader === "") {
 	Config.Baal.HotTPMessage = "Hot TP!";
 	Config.Baal.SafeTPMessage = "Safe TP!";
 	Config.Baal.BaalMessage = "Baal!";
-	Config.Baal.SoulQuit = false;
-	Config.Baal.DollQuit = false;
+	Config.Baal.SoulQuit = true;
+	Config.Baal.DollQuit = true;
 	Config.Baal.KillBaal = true;
 
 	Scripts.ChestMania = false; // Open chests in configured areas. See sdk/areas.txt

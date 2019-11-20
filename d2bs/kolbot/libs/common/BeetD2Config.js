@@ -75,7 +75,24 @@ var BeetD2Config = {
 		//Config.Recipes.push([Recipe.Rune, "Ist Rune"]); // Upgrade Ist to Gul
 		Config.Recipes.push([Recipe.Rune, "Gul Rune"]); // Upgrade Gul to Vex
 
-		// TODO(tuna): Runewords!
-		//Config.MakeRunewords = true;
+		Config.MakeRunewords = true;
+
+		// Shields.
+		Config.Runewords.push([Runeword.Rhyme, "Spiked Shield", Roll.NonEth]);
+		Config.Runewords.push([Runeword.Rhyme, "Bone Shield", Roll.NonEth]);
+		Config.Runewords.push([Runeword.Spirit, "Monarch", Roll.NonEth]);
+
+		//Weapons.
+		Config.Runewords.push([Runeword.Spirit, "Broad Sword", Roll.NonEth]);
+
+		// Armor.
+		Config.Runewords.push([Runeword.Stealth, "Leather Armor", Roll.NonEth]);
+		Config.Runewords.push([Runeword.Stealth, "Studded Leather", Roll.NonEth]);
+		Config.Runewords.push([Runeword.Smoke, "Ghost Armor", Roll.NonEth]);
+		Config.Runewords.push([Runeword.Smoke, "Serpentskin Armor", Roll.NonEth]);
+
+		// Helms.
+		Config.Runewords.push([Runeword.Lore, "Skull Cap", Roll.NonEth]);
+		Config.Runewords.push([Runeword.Lore, "Bone Helm", Roll.NonEth]);
 	}
 };

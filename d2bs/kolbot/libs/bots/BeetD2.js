@@ -431,7 +431,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 
 		Pather.teleport = false;
 
-		Attack.clear(10);
+		Attack.clear(20);
 
 		var bosses = [2863, 2860, 2862];
 		for (let i = 0; i < 3; i++) {
@@ -617,7 +617,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Config.Baal.HotTPMessage = "Hot TP!";
 		Config.Baal.SafeTPMessage = "Safe TP!";
 		Config.Baal.BaalMessage = "Baal!";
-		Config.Baal.SoulQuit = false;
+		Config.Baal.SoulQuit = me.charlvl < 75;
 		Config.Baal.DollQuit = false;
 		Config.Baal.KillBaal = me.charlvl === nightmareLevel || me.charlvl === hellLevel;
 		BeetD2Baal();
