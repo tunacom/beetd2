@@ -84,6 +84,7 @@ var BeetD2Config = {
 
 		//Weapons.
 		Config.Runewords.push([Runeword.Spirit, "Broad Sword", Roll.NonEth]);
+		Config.Runewords.push([Runeword.Spirit, "Crystal Sword", Roll.NonEth]);
 
 		// Armor.
 		Config.Runewords.push([Runeword.Stealth, "Leather Armor", Roll.NonEth]);

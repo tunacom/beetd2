@@ -100,5 +100,13 @@
 ([type] == staff || [type] == orb) && [quality] >= magic && [flag] != ethereal # [sorceressskills]+[coldskilltab] >= 3 # [tier] == 100
 ([type] == staff || [type] == orb) && [quality] >= magic && [flag] != ethereal # [sorceressskills]+[coldskilltab]+[skillfrozenorb] >= 4 # [tier] == 101
 
+// Runeword bases.
+([name] == broadsword || [name] == crystalsword || [name] == monarch) && [quality] <= superior && [flag] != ethereal # [sockets] == 4 # [maxquantity] == 1  // Spirit swords.
+[name] == monarch && [quality] <= superior && [flag] != ethereal # [sockets] == 4 # [maxquantity] == 1  // Spirit monarch.
+([name] == boneshield || [name] == spikedshield) && [quality] <= superior && [flag] != ethereal # [sockets] == 2 # [maxquantity] == 1  // Early rhyme bases.
+([name] == leatherarmor || [name] == studdedleather) && [quality] <= superior && [flag] != ethereal # [sockets] == 2 # [maxquantity] == 1  // Early stealth bases.
+([name] == ghostarmor || [name] == serpentskinarmor) && [quality] <= superior && [flag] != ethereal # [sockets] == 2 # [maxquantity] == 1  // Midgame smoke bases.
+([name] == skullcap || [name] == bonehelm) && [quality] <= superior && [flag] != ethereal # [sockets] == 2 # [maxquantity] == 1  // Early lore bases.
+
 // Additional gold.
 [quality] >= magic # [strength] >= 100

@@ -4,16 +4,11 @@
 // Add your own custom stuff here. //
 /////////////////////////////////////
 
-[Name] == matriarchalbow && [quality] <= superior # [sockets] == 4  // Oath base.
-[Name] == greatbow && [quality] == superior # [enhanceddamage] >= 10 && ([sockets] == 0 || [sockets] == 4)  // Oath base.
-[Name] == wirefleece && [quality] == superior # [enhanceddefense] >= 10 && [sockets] == 3  // Dragon base.
-[Name] == cedarbow && [quality] == unique  // Kuko.
-[Name] == wargauntlets && [quality] == Unique  // Procazon gloves.
-[type] == polearm && [class] == elite && [flag] == ethereal && [quality] <= superior # ([sockets] == 0 || [sockets] == 4)  // Slightly less bad insight bases.
-[Type] == Orb && [Quality] >= magic # [SorceressSkills]+[FireSkillTab]+[SkillEnchant] >= 5  // Early chant orb.
-[Type] == Amulet && [Quality] >= magic # [FireSkillTab] >= 3  // Early fire ammy.
-[Type] == Amulet && [Quality] >= magic # [WarcriesSkillTab] >= 3  // Early wc ammy.
-[Type] == Circlet && [Quality] >= magic # [FireSkillTab] >= 3  // Early fire circ.
+//[type] == polearm && [class] == elite && [flag] == ethereal && [quality] <= superior # ([sockets] == 0 || [sockets] == 4)  // Slightly less bad insight bases.
+//[Type] == Orb && [Quality] >= magic # [SorceressSkills]+[FireSkillTab]+[SkillEnchant] >= 5  // Early chant orb.
+//[Type] == Amulet && [Quality] >= magic # [FireSkillTab] >= 3  // Early fire ammy.
+//[Type] == Amulet && [Quality] >= magic # [WarcriesSkillTab] >= 3  // Early wc ammy.
+//[Type] == Circlet && [Quality] >= magic # [FireSkillTab] >= 3  // Early fire circ.
 
 
 ///////////////////////////////////////
