@@ -149,6 +149,7 @@ var BeetD2Common = { // eslint-disable-line no-unused-vars,no-redeclare
 		}
 		for (i = 0; i < 10 && !Pickit.pickItem(item); i += 1) {
 			delay(250 + me.ping * 2);
+			item = getUnit(4, classid);
 		}
 		return !!getUnit(4, classid); //(<3 kolton)
 	},

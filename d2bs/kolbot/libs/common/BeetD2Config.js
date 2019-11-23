@@ -52,12 +52,11 @@ var BeetD2Config = {
 		// Misc.
 		Config.ClearType = 0x0;
 		Config.OpenChests = true;
-		Config.AutoEquip = me.charlvl < 80 ? true : false; // Assume gear is okay by 80. Probably going to need manual intervention by then.
+		Config.AutoEquip = true;
 		Config.MaxGameTime = 1800;
 
 		// Cubing.
-		//Config.Cubing = me.charlvl >= 36;  // Grab the cube during baal runs in case things have gone wrong.
-		Config.Cubing = false; // TODO(tuna): Make sure everyone gets the cube more consistently then enable.
+		Config.Cubing = me.charlvl >= 36;
 
 		Config.Recipes.push([Recipe.Gem, "Flawless Amethyst"]); // Make Perfect Amethyst
 		Config.Recipes.push([Recipe.Gem, "Flawless Topaz"]); // Make Perfect Topaz
