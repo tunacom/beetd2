@@ -364,6 +364,7 @@ var BeetD2Common = { // eslint-disable-line no-unused-vars,no-redeclare
 
 			delay(1500);
 
+			Pather.moveTo(17566 + rand(-3, 4), 8069 + rand(-3, 4));
 			target = getUnit(2, 342);
 
 			if (target) {

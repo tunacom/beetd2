@@ -56,7 +56,7 @@ var BeetD2Config = {
 		Config.MaxGameTime = 1800;
 
 		// Cubing.
-		Config.Cubing = me.charlvl >= 36;
+		Config.Cubing = me.charlvl >= 40;
 
 		Config.Recipes.push([Recipe.Gem, "Flawless Amethyst"]); // Make Perfect Amethyst
 		Config.Recipes.push([Recipe.Gem, "Flawless Topaz"]); // Make Perfect Topaz
@@ -94,5 +94,11 @@ var BeetD2Config = {
 		// Helms.
 		Config.Runewords.push([Runeword.Lore, "Skull Cap", Roll.NonEth]);
 		Config.Runewords.push([Runeword.Lore, "Bone Helm", Roll.NonEth]);
+
+		// Local chat.
+		Config.LocalChat.Enabled = true; // enable the LocalChat system
+		Config.LocalChat.Toggle = false; // optional, set to KEY value to toggle through modes 0, 1, 2
+		Config.LocalChat.Mode = 2; // 0 = disabled, 1 = chat from 'say' (recommended), 2 = all chat (for manual play)
+
 	}
 };

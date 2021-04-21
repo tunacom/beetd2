@@ -5,7 +5,7 @@
  */
 
 // TODO(tuna): This file is quickly hacked together from a copy. Needs to be linted and cleaned up.
-function BeetD2Baal () {
+function BeetD2Baal () { // eslint-disable-line no-unused-vars
 	var portal, tick;
 
 	this.preattack = function () {
@@ -221,21 +221,21 @@ function BeetD2Baal () {
 	Pather.moveTo(15095, 5029);
 
 	if (Config.Baal.DollQuit && getUnit(1, 691)) {
-		say("Dolls found! NG.");
+		//say("Dolls found! NG.");
 
 		Town.doChores();
 		return true;
 	}
 
 	if (Config.Baal.SoulQuit && getUnit(1, 641)) {
-		say("Souls found! NG.");
+		//say("Souls found! NG.");
 
 		Town.doChores();
 		return true;
 	}
 
 	if (Config.PublicMode) {
-		this.announce();
+		//this.announce();
 		Pather.moveTo(15118, 5002);
 		Pather.makePortal();
 		say("1");
@@ -249,7 +249,7 @@ function BeetD2Baal () {
 	if (Config.PublicMode) {
 		Pather.moveTo(15118, 5045);
 		Pather.makePortal();
-		say("1");
+		//say("1");
 		Precast.doPrecast(true);
 	}
 
@@ -320,7 +320,7 @@ function BeetD2Baal () {
 
 	if (Config.Baal.KillBaal) {
 		if (Config.PublicMode) {
-			say(Config.Baal.BaalMessage);
+			//say(Config.Baal.BaalMessage);
 		}
 
 		Pather.moveTo(15090, 5008);

@@ -30,7 +30,7 @@ def main(argv):
     config = json.load(open(argv[0]))
 
     # Copy Beetd2 scripts into the target directory.
-    script_base = os.path.join(os.path.dirname(__file__), 'd2bs')
+    script_base = os.path.join(os.path.relpath(os.path.dirname(__file__)), 'd2bs')
     for prefix, _, files in os.walk(script_base):
         for filename in files:
             source_file = os.path.join(os.path.dirname(__file__), prefix,

@@ -5,7 +5,7 @@
  */
 
 // TODO(tuna): This file is quickly hacked together from a copy. Needs to be linted and cleaned up.
-function BeetD2Diablo () {
+function BeetD2Diablo () { // eslint-disable-line no-unused-vars
 	// Sort function
 	this.sort = function (a, b) {
 		if (Config.BossPriority) {
@@ -100,7 +100,7 @@ function BeetD2Diablo () {
 
 			if (seal.mode) { // for pubbies
 				if (warn) {
-					say(Config.Diablo.SealWarning);
+					//say(Config.Diablo.SealWarning);
 				}
 
 				return true;
@@ -466,7 +466,7 @@ function BeetD2Diablo () {
 
 		if (Config.PublicMode) {
 			Pather.makePortal();
-			say(Config.Diablo.EntranceTP);
+			//say(Config.Diablo.EntranceTP);
 		}
 
 		Pather.moveTo(7790, 5544);
@@ -506,7 +506,7 @@ function BeetD2Diablo () {
 
 
 	if (Config.PublicMode) {
-		say(Config.Diablo.DiabloMsg);
+		//say(Config.Diablo.DiabloMsg);
 	}
 
 	this.diabloPrep();

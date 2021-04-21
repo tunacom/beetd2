@@ -18,7 +18,7 @@ if (!isIncluded("common/BeetD2Common.js")) {
 
 function BeetD2 () { // eslint-disable-line no-unused-vars
 	// Attempt to beat diablo 2. Then beat it again. And again. It's probably worse than Autosmurf.
-	const nightmareLevel = 57;
+	const nightmareLevel = 52;
 	const hellLevel = 85;
 
 	var areaList = [];
@@ -56,13 +56,13 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		return true;
 	};
 
-	this.waitForPlayers = function (x, y, fight) {
+	this.waitForPlayers = function (x, y, fight, area) {
 		Pather.moveTo(x, y, 3, fight);
 
 		BeetD2Common.makePortal();
 		say("1");
 
-		while (!this.playersInArea()) {
+		while (!this.playersInArea(area)) {
 			delay(1000);
 
 			Pather.moveTo(x, y, 3, true);
@@ -104,6 +104,12 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			}
 		} else {
 			Pather.teleport = true;
+			Pather.journeyTo(6);
+			this.waitForPlayers(me.x, me.y, false);
+			delay(1000);
+			say("bo");
+			delay(5000);
+			say("2");
 			Pather.journeyTo(37);
 		}
 
@@ -157,8 +163,10 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 		say("cube");
 
+		this.waitForPlayers(me.x, me.y, true, 40);
+
 		delay(10000);
-		say(2);
+		//say(2);
 		Town.goToTown();
 	};
 
@@ -559,9 +567,9 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.diablo = function () {
-		if (me.getQuest(28, 0)) {
-			return;
-		}
+		//if (me.getQuest(28, 0)) {
+		//	return;
+		//}
 
 		Config.Diablo.Entrance = false; // Start from entrance
 		Config.Diablo.SealWarning = "Leave the seals alone!";
@@ -571,6 +579,10 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		BeetD2Diablo();
 
 		delay(1000);
+		if (me.getQuest(28, 0)) {
+			return;
+		}
+
 		say("a5");
 
 		while (!this.playersInArea(109)) {
@@ -619,7 +631,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Config.Baal.BaalMessage = "Baal!";
 		Config.Baal.SoulQuit = false;
 		Config.Baal.DollQuit = false;
-		Config.Baal.KillBaal = me.charlvl === nightmareLevel || me.charlvl === hellLevel;
+		Config.Baal.KillBaal = me.charlvl === nightmareLevel || me.charlvl >= hellLevel;
 		BeetD2Baal();
 	};
 

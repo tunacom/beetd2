@@ -38,9 +38,7 @@
 [Name] == RejuvenationPotion
 [Name] == FullRejuvenationPotion
 
-//[Type] == Key # # [MaxQuantity] == 12  // 1 stack of keys.
-//[Type] == Key # # [MaxQuantity] == 24  // 2 stacks of keys.
-[Type] == Key # # [MaxQuantity] == 48  // 4 stacks of keys.
+[Type] == Key # # [MaxQuantity] == 12  // 1 stack of keys.
 
 // P-gems. If you cube them up you probably want to keep them.
 [Name] == PerfectAmethyst
