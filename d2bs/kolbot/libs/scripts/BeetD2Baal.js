@@ -214,11 +214,17 @@ function BeetD2Baal () { // eslint-disable-line no-unused-vars
 		Pather.useWaypoint(129);
 	}
 
-	if (!Pather.moveToExit([130, 131], true)) {
-		throw new Error("Failed to move to Throne of Destruction.");
+	if (Pather.canTeleport()) {
+		if (!Pather.moveToExit([130, 131], true)) {
+			throw new Error("Failed to move to Throne of Destruction.");
+		}
+		Pather.moveTo(15095, 5029);
+	}
+	else {
+		BeetD2Common.fightTo(131);
+		Pather.moveTo(15095, 5029, 5, true);
 	}
 
-	Pather.moveTo(15095, 5029);
 
 	if (Config.Baal.DollQuit && getUnit(1, 691)) {
 		//say("Dolls found! NG.");
