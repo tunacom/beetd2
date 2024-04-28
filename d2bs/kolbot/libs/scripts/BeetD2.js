@@ -4,12 +4,12 @@
  *  @desc    Beats d2. Norm->Hell.
  */
 
-if (!isIncluded("bots/BeetD2Diablo.js")) {
-	include("bots/BeetD2Diablo.js");
+if (!isIncluded("scripts/BeetD2Diablo.js")) {
+	include("scripts/BeetD2Diablo.js");
 }
 
-if (!isIncluded("bots/BeetD2Baal.js")) {
-	include("bots/BeetD2Baal.js");
+if (!isIncluded("scripts/BeetD2Baal.js")) {
+	include("scripts/BeetD2Baal.js");
 }
 
 if (!isIncluded("common/BeetD2Common.js")) {
