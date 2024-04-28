@@ -97,7 +97,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		// Fight or tele to cats 4.
-		if (me.charlvl < nightmareLevel) {
+		if (me.charlvl < nightmareLevel || !Pather.canTeleport()) {
 			BeetD2Common.disableTeleIfNeeded();
 			while (!BeetD2Common.fightTo(37)) {
 				// Keep retrying if we fail to fight there.
@@ -129,7 +129,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 
 		BeetD2Common.changeAct(2);
 
-		if (me.charlvl >= nightmareLevel) {
+		if (me.charlvl >= nightmareLevel || !Pather.canTeleport()) {
 			Pather.teleport = true;
 		}
 	};
@@ -140,7 +140,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		var fight = true;
-		if (me.charlvl < nightmareLevel) {
+		if (me.charlvl < nightmareLevel || !Pather.canTeleport()) {
 			BeetD2Common.disableTeleIfNeeded();
 			while (!BeetD2Common.fightTo(60)) {
 				// Retry if we fail to fight there.
@@ -175,9 +175,13 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			return;
 		}
 
-		Pather.teleport = true;
-
-		Pather.journeyTo(61);
+		if (Pather.canTeleport()) {
+			Pather.teleport = true;
+			Pather.journeyTo(61);
+		}
+		else {
+			BeetD2Common.fightTo(61);
+		}
 		Pather.moveTo(15044, 14045, 3, true);
 
 		if (!BeetD2Common.getQuestItem(521, 149)) {
@@ -196,10 +200,16 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		// Get the staff.
-		Pather.teleport = true;
-
-		Pather.journeyTo(64);
-		Pather.moveToPreset(me.area, 2, 356);
+		if (Pather.canTeleport()) {
+			Pather.teleport = true;
+			Pather.journeyTo(64);
+			Pather.moveToPreset(me.area, 2, 356);
+		}
+		else {
+			BeetD2Common.fightTo(64);
+			Pather.moveToPreset(me.area, 2, 356, 0, 0, true);
+		}
+		
 		if (!BeetD2Common.getQuestItem(92, 356)) {
 			throw new Error("Failed to pick staff.");
 		}
@@ -235,9 +245,13 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			return;
 		}
 
-		Pather.teleport = true;
-
-		Pather.journeyTo(74);
+		if (Pather.canTeleport()) {
+			Pather.teleport = true;
+			Pather.journeyTo(74);
+		}
+		else {
+			BeetD2Common.fightTo(74);
+		}
 		BeetD2Common.getWP();
 
 		var preset = getPresetUnit(me.area, 2, 357);
@@ -274,7 +288,12 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		}
 
 		// Move close to the summoner then to his exact position.
-		Pather.moveTo(spot.x, spot.y);
+		if (Pather.canTeleport()) {
+			Pather.moveTo(spot.x, spot.y);
+		}
+		else {
+			Pather.moveTo(spot.x, spot.y, 5, true);
+		}
 		var target = getUnit(1, 250);
 		this.waitForPlayers(target.x, target.y, false);
 		Attack.clear(25);
@@ -310,8 +329,18 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			return;
 		}
 
-		Pather.journeyTo(46);
-		if (!Pather.moveToExit(getRoom().correcttomb, true) || !Pather.moveToPreset(me.area, 2, 152)) {
+		var fight = false;
+		if (Pather.canTeleport()) {
+			Pather.teleport = true;
+			Pather.journeyTo(46);
+		}
+		else {
+			BeetD2Common.fightTo(46);
+			fight = true;
+		}
+
+
+		if (!Pather.moveToExit(getRoom().correcttomb, true) || !Pather.moveToPreset(me.area, 2, 152, 0, 0, fight)) {
 			throw new Error("Failed to move to oriface.");
 		}
 
@@ -389,8 +418,15 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			return;
 		}
 
-		Pather.journeyTo(85);
-		Pather.moveToPreset(me.area, 2, 407);
+		var fight = false;
+		if (Pather.canTeleport()) {
+			Pather.journeyTo(85);
+		}
+		else {
+			BeetD2Common.fightTo(85);
+			fight = true;
+		}
+		Pather.moveToPreset(me.area, 2, 407, 0, 0, fight);
 		BeetD2Common.getQuestItem(553, 407);
 
 		Town.goToTown();
@@ -401,9 +437,15 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		if (me.getQuest(18, 0) || me.getItem(555) || me.getItem(174)) {
 			return;
 		}
-
-		Pather.journeyTo(91);
-		Pather.moveToPreset(me.area, 2, 406);
+		var fight = false;
+		if (Pather.canTeleport()) {
+			Pather.journeyTo(91);
+		}
+		else {
+			BeetD2Common.fightTo(91);
+			fight = true;
+		}
+		Pather.moveToPreset(me.area, 2, 406, 0, 0, fight);
 		BeetD2Common.getQuestItem(555, 406);
 
 		Town.goToTown();
@@ -415,8 +457,15 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			return;
 		}
 
-		Pather.journeyTo(93);
-		Pather.moveToPreset(me.area, 2, 405);
+		var fight = false;
+		if (Pather.canTeleport()) {
+			Pather.journeyTo(93);
+		}
+		else {
+			BeetD2Common.fightTo(93);
+			fight = true;
+		}
+		Pather.moveToPreset(me.area, 2, 405, 0, 0, fight);
 		BeetD2Common.getQuestItem(554, 405);
 
 		Town.goToTown();
@@ -432,8 +481,14 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		say("town 3");
 		delay(20000);
 
+		var fight = false;
+		if (!Pather.canTeleport()) {
+			Pather.fightTo(83);
+			fight = true;
+		}
 		Pather.useWaypoint(83);
-		Pather.moveTo(me.x + 97, me.y - 56); // Originally me.y - 68.
+		
+		Pather.moveTo(me.x + 97, me.y - 56, 5, fight); // Originally me.y - 68.
 		BeetD2Common.makePortal();
 		say("1");
 
@@ -548,8 +603,15 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			return;
 		}
 
-		Pather.journeyTo(102);
-		Pather.moveTo(17566, 8069);
+		var fight = false;
+		if (Pather.canTeleport()) {
+			Pather.journeyTo(102);
+		}
+		else {
+			BeetD2Common.fightTo(102);
+			fight = true;
+		}
+		Pather.moveTo(17566, 8069, 5, fight);
 		BeetD2Common.makePortal();
 		say("1");
 
@@ -597,7 +659,13 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 			return;
 		}
 
-		Pather.journeyTo(120);
+		if (Pather.canTeleport()) {
+			Pather.journeyTo(120);
+		}
+		else {
+			BeetD2Common.fightTo(120);
+		}
+
 		this.waitForPlayers(10048, 12634, false);
 		var altar = getUnit(2, 546);
 		Pather.moveToUnit(altar);
@@ -631,7 +699,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Config.Baal.BaalMessage = "Baal!";
 		Config.Baal.SoulQuit = false;
 		Config.Baal.DollQuit = false;
-		Config.Baal.KillBaal = me.charlvl === nightmareLevel || me.charlvl >= hellLevel;
+		Config.Baal.KillBaal = me.charlvl >= nightmareLevel || me.charlvl >= hellLevel;
 		BeetD2Baal();
 	};
 
@@ -687,11 +755,11 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	this.questIfNecessary();
 
 	for (var i = 0; i < areaList.length; i++) {
-		if (Pather.teleport && me.getSkill(54, 1) && !Pather.journeyTo(areaList[i])) {
+		if (Pather.teleport && Pather.canTeleport() && !Pather.journeyTo(areaList[i])) {
 			continue;
 		}
 
-		if ((!Pather.teleport || !me.getSkill(54, 1)) && !BeetD2Common.fightTo(areaList[i])) {
+		if ((!Pather.teleport || !Pather.canTeleport()) && !BeetD2Common.fightTo(areaList[i])) {
 			continue;
 		}
 
