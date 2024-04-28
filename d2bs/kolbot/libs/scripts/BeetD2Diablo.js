@@ -454,7 +454,7 @@ function BeetD2Diablo () { // eslint-disable-line no-unused-vars
 		Pather.useWaypoint(107);
 	}
 
-	if (!Pather.moveTo(7790, 5544)) {
+	if (!Pather.moveTo(7790, 5544, 5, !Pather.canTeleport())) {
 		throw new Error("Failed to move to Chaos Sanctuary");
 	}
 
