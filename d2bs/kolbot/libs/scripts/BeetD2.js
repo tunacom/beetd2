@@ -483,7 +483,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 
 		var fight = false;
 		if (!Pather.canTeleport()) {
-			Pather.fightTo(83);
+			BeetD2Common.fightTo(83);
 			fight = true;
 		}
 		Pather.useWaypoint(83);
