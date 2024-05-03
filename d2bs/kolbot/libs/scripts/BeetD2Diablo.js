@@ -24,21 +24,12 @@ function BeetD2Diablo () { // eslint-disable-line no-unused-vars
 	
 	Common.Diablo.initLayout();
 	
-	if (Config.Diablo.JustViz) {
-		Common.Diablo.vizLayout === 1 ? Pather.moveTo(7708, 5269) : Pather.moveTo(7647, 5267);
-		Config.PublicMode && Pather.makePortal();
-		Common.Diablo.vizierSeal(true);
-		
-		return true;
-	}
-	
 	try {
 		if (Config.Diablo.Entrance && !Config.Diablo.Fast) {
 			Attack.clear(30, 0, false, Common.Diablo.sort);
 			Pather.moveTo(7790, 5544);
 			
 			if (Config.PublicMode && Pather.makePortal()) {
-				Pather.makePortal();
 				say("1");
 				delay(5000);
 				Pather.teleport = false;
