@@ -5,7 +5,9 @@
  */
 
 // TODO(tuna): This file is quickly hacked together from a copy. Needs to be linted and cleaned up.
-function BeetD2Baal () { // eslint-disable-line no-unused-vars
+function BeetD2Baal () { // eslint-disable-line no-unused-vars\
+	include("core/Common/Baal.js");
+	
 	delay(5000); // Ensure that previous script is done for followers.
 	say("town 5");
 
