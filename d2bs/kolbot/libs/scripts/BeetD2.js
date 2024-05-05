@@ -629,9 +629,9 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 	};
 
 	this.diablo = function () {
-		//if (me.getQuest(28, 0)) {
-		//	return;
-		//}
+		if (me.getQuest(28, 0)) {
+			return;
+		}
 
 		Config.Diablo.Entrance = false; // Start from entrance
 		Config.Diablo.SealWarning = "Leave the seals alone!";
@@ -641,6 +641,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		BeetD2Diablo();
 
 		delay(1000);
+		// TODO: This is probably unnecessary.
 		if (me.getQuest(28, 0)) {
 			return;
 		}
