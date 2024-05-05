@@ -700,7 +700,7 @@ function BeetD2 () { // eslint-disable-line no-unused-vars
 		Config.Baal.BaalMessage = "Baal!";
 		Config.Baal.SoulQuit = false;
 		Config.Baal.DollQuit = false;
-		Config.Baal.KillBaal = me.charlvl >= nightmareLevel || me.charlvl >= hellLevel;
+		Config.Baal.KillBaal = me.charlvl == nightmareLevel || me.charlvl >= hellLevel;
 		BeetD2Baal();
 	};
 
