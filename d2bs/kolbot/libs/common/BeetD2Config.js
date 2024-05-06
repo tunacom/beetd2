@@ -58,13 +58,13 @@ var BeetD2Config = {
 		// Cubing.
 		Config.Cubing = me.charlvl >= 40;
 
-		Config.Recipes.push([Recipe.Gem, "Flawless Amethyst"]); // Make Perfect Amethyst
-		Config.Recipes.push([Recipe.Gem, "Flawless Topaz"]); // Make Perfect Topaz
-		Config.Recipes.push([Recipe.Gem, "Flawless Sapphire"]); // Make Perfect Sapphire
-		Config.Recipes.push([Recipe.Gem, "Flawless Emerald"]); // Make Perfect Emerald
-		Config.Recipes.push([Recipe.Gem, "Flawless Ruby"]); // Make Perfect Ruby
-		Config.Recipes.push([Recipe.Gem, "Flawless Diamond"]); // Make Perfect Diamond
-		Config.Recipes.push([Recipe.Gem, "Flawless Skull"]); // Make Perfect Skull
+		Config.Recipes.push([Recipe.Gem, "Perfect Amethyst"]); // Make Perfect Amethyst
+		Config.Recipes.push([Recipe.Gem, "Perfect Topaz"]); // Make Perfect Topaz
+		Config.Recipes.push([Recipe.Gem, "Perfect Sapphire"]); // Make Perfect Sapphire
+		Config.Recipes.push([Recipe.Gem, "Perfect Emerald"]); // Make Perfect Emerald
+		Config.Recipes.push([Recipe.Gem, "Perfect Ruby"]); // Make Perfect Ruby
+		Config.Recipes.push([Recipe.Gem, "Perfect Diamond"]); // Make Perfect Diamond
+		Config.Recipes.push([Recipe.Gem, "Perfect Skull"]); // Make Perfect Skull
 
 		Config.Recipes.push([Recipe.Token]); // Make Token of Absolution
 
